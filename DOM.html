@@ -1,0 +1,23 @@
+<!--  rock paper scissor but using DOM -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM - Projects</title>
+  </head>
+  <body>
+    <p>YouTube subscribe button</p>
+     <button onclick="
+         subscribe();
+     "class="js-button"> Subscribe</button>
+    <script>
+        function subscribe(){
+            const button=  document.querySelector('.js-button');  // it can be stored in a variable 
+     if(button.innerText === 'Subscribe'){
+        button.innerText='Subscribed';
+     } else{
+        button.innerText='Subscribe';
+     }
+        }
+    </script>
+  </body>
+</html>

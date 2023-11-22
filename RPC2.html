@@ -1,0 +1,75 @@
+<!-- same RPC but using function -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+      let cpu=computerMove();
+
+      let result = '';
+
+      if (cpu === 'rock') {
+        result = 'Tie.';
+      } else if (cpu === 'paper') {
+        result = 'You lose.';
+      } else if (cpu === 'scissors') {
+        result = 'You win.';
+      }
+
+      alert(`You picked rock. CPU picked ${cpu}. ${result}`);
+    ">Rock</button>
+
+    <button onclick="
+     cpu=computerMove();
+
+       result = '';
+
+      if (cpu === 'rock') {
+        result = 'You win.';
+      } else if (cpu === 'paper') {
+        result = 'Tie.';
+      } else if (cpu === 'scissors') {
+        result = 'You lose.';
+      }
+
+      alert(`You picked paper. CPU picked ${cpu}. ${result}`);
+    ">Paper</button>
+
+    <button onclick="
+     cpu=computerMove();
+
+
+       result = '';
+
+      if (cpu === 'rock') {
+        result = 'You lose.';
+      } else if (cpu === 'paper') {
+        result = 'You win.';
+      } else if (cpu === 'scissors') {
+        result = 'Tie.';
+      }
+
+      alert(`You picked scissors. CPU picked ${cpu}. ${result}`);
+    ">Scissors</button>
+
+    <script>
+      function computerMove(){ 
+        const CPU = Math.random();
+
+        let cpu = '';
+  
+        if (CPU >= 0 && CPU < 1 / 3) {
+          cpu = 'rock';
+        } else if (CPU >= 1 / 3 && CPU < 2 / 3) {
+          cpu = 'paper';
+        } else if (CPU >= 2 / 3 && CPU < 1) {
+          cpu = 'scissors';
+        }
+        return cpu;
+      }
+    </script>
+  </body>
+</html>

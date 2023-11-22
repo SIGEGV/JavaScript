@@ -1,0 +1,159 @@
+#alert('message')-> gives the pop up in browser
+
+how to round number in js-> 
+   Math.round(number)
+     eg-> Math.round(2.2)-> 2;
+          MAth.round(2.8)->3;
+   Number(something)-> convert somthing into number;
+
+# strings- >     also follow the BODMAS
+   'hello'-> is a string;
+   'hello' + 'world'-> helloworld;   this is called concatination;
+   'hello' + 3-> hello3 -> ('hello' + '3') -> this is called type coercion or automatic type conversion; 
+   // typeof (something)-> return the data type of something
+   
+    '$' + 20.95+ 7.99 -> $20.957.99
+    '$' + (20.95+7.99)-> $28.99999999998;
+
+      ways to create a string->
+             1st-> ' yash '
+             2nd-> " yash" -> might be use full when we have single quote within a string;
+             3rd-> ` yash `-> template string  -     // special features
+                                               | 
+                                               V
+                               1-> interpolation -> meaning help to insert a value directly into a string syntx-> `string ${value to be added}`
+                                    eg-> `Items(${1+1}):` -> Items(2):                
+                               2-> multiline string-> 
+                                     ` yash 
+                                         dobriyal 
+                                           is here
+                                                `
+# console.log(); -> display whatever it has within the (); 
+
+# variables-> 
+         1-> let variable name= something;
+         2-> const variable name = something; -> never changes always remain same ;
+         3-> var variable name = something ;-> orignal mthod; we dont use this as it does nt folllow the concept of Scope; 
+
+# booleans->  same as usual;
+
+#comparison opperators-> 
+
+// in js we always use === to check if two value are equal or not for eg-> 
+                      2=='2.00' -> gives true reason -> as js convert both lval and rval to int and then comp which is wrong
+                      hence ===
+// same goes for !== and !=;
+
+
+#conditional statements-> same as c++;
+     if(cond){
+             something1;
+     }
+     else if(){
+          something2;
+     }
+     else {
+        something3;
+     }
+# functions-> 
+     syntax-> function MyFunction(parameter1,parameter2, parameter3......){
+          body 
+          return if needed;
+     }
+#objects-> 
+      syntax-> 
+            const car = {
+   //   property: property value
+            type:"Fiat",
+            model:"500",
+            color:"white"
+          };
+      console.log(car)->  {type:"Fiat", model:"500", color:"white"};
+      console.log(car.type)-> Fiat
+      delete a property -> delete object.property;
+      create a new property-> object.newproperty= val;
+
+      JSON.stringify(js object) -> convert js object to JSON string;
+      JSON.parse()-> receiving data from a web server, the data is always a string.
+                     Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+     
+     localStorage-> The localStorage object stores data with no expiration date.
+                    The data is not deleted when the browser is closed, and are available for future sessions.
+              
+                 -> localStorage.setItem("lastname", "Smith");   // always accept the string;
+                     localStorage.getItem("lastname")   // to retrieve value 
+                     localStorage.removeItem(key);    // to remove the value
+
+                     Parameters
+                              Parameter           	Description
+                              key                       Required.The name of a key.
+
+                              value	                 Required.The value of the key.
+                              
+
+                    
+                    const myObject = {
+                    name : "john doe",
+                    age : 32,
+                    gender : "male",
+                    profession : "optician" 
+                    }
+
+                    window.localStorage.setItem("myObject", JSON.stringify(myObject));
+                    
+                    let newObject = window.localStorage.getItem("myObject");
+                    console.log(JSON.parse(newObject));
+    
+    objects are references  i.e -> const car = {
+                         //   property: property value
+                                   type:"Fiat",
+                                   model:"500",
+                                   color:"white"
+                                   };
+                              // here car is reference to the location in memory where  all those tyoes exist;
+                              const car2=car -> meaning car2 contains the reference of the car and doesnt copy the car object;
+                              if you change some thingin car the same will be reflected in car2;
+
+
+    // here const means that the reference does nt changes but the value inside it can change;
+    // objcts cant be compared directly 
+    //  destructuring-> 
+           const type= car.type -> shortcut->    const{type}= car    // only work if variable name == property name
+          
+
+#DOM -> Document Object Model;
+/* 
+ 
+With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+
+*/
+         Document.body.innerHTLM= hello // changes the body; 
+         Document.title= hiii // changes the title of html;
+         // here the Document object represents or models the webpage;
+         // Document objects also have the methods;
+      -> syntax-> 
+              Document.property;
+     properties-> 
+           1. Document.title-> get us the html title tag and can change its value;
+           2. Document.body-> get us the html body tag and help us to integrate html with js;
+           3. Document.body.innerHTLM-> here innerHTLM controls all html  within the body;
+                -> Document.body.innerHTLM='<button> something </button> ' -> changes everything inside body to a button;
+           4. Document.querrySelector(' ')-> let us get any element from  the page and put inside the JS;
+               -> Document.querrySelector('Button').innerHTLM='changed' -> changes the button name to changed;
+               if there are multiple button we will label each of them with a label using class;
+                    eg <button class= 'js-button'></button>
+                        not to change it ->  Document.querrySelector('.js-button').innerHTLM='changed' 
+                           // here . means we are looking for label rather then attribute; 
+          5. Document.innerText -> we use this is there are some spaces in html;
+          6. document.classList->  gives the control of class attribute 
+                  -> classList.add() to add a new class in an attribute
+note--> to use css use style tag in head;
