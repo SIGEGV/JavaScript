@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(25,25,25);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+ } 
+.ADD-Button{
+      padding: 10x;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      color: green;
+}
+
+.placehld{
+    padding-left: 5px;
+    padding-right:5px ;
+    padding-top: 5px;
+    padding-bottom: 5px ;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.date{
+    padding-left: 5px;
+    padding-right:5px ;
+    padding-top: 5px;
+    padding-bottom: 5px ;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+.DELETE-BUTTON{
+    padding: 10x;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+.todo-grid,
+.todo-input{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
